@@ -17,3 +17,5 @@ X_train, X_val, X_test, y_train, y_val, y_test = getTrainValTest(X,y, 0.8, 0.1)
 ## Tune the algorithm's hyperparameters 
 
 ## Test the algorithm 
+
+## Stack of models 
