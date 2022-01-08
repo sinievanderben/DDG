@@ -1,0 +1,14 @@
+name: ddg
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.9
+  - matplotlib
+
+  - numpy
+  - pandas
+  - skicit-learn
+
+  - ipykernel=6.6.1     
+  - ipython=7.31.0 
