@@ -29,7 +29,7 @@ def tuning(name, model, X, y):
         
 
     
-    search = RandomizedSearchCV(model, grid, n_iter=100, scoring = 'neg_root_mean_squared_error', cv=5)
+    search = RandomizedSearchCV(model, grid, n_iter=100, scoring = 'neg_root_mean_squared_error', cv=5, random_state = 1)
     print("End of tuning the model..")
 
     final_model = search.fit(X, y)

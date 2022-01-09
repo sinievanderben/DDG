@@ -33,9 +33,10 @@ This will print out the train, validation and test error of the final used model
 The collection of files are:
 - main.py : runs it all, rules it all
 - helperfunctions.py: some messy functions which I wanted to separate but did not take enough space for own files. Contains function to split the dataset and to show the reslts 
+- tuning.py performs the tuning of the RF an the GB models. 
 - cleanupfeatures.py: file that contains the functions to clean up the features and perform feature selection. 
 - bonus.py:
 
-Hyperparameter tuning and extensive feature search is not done in the Python files. These files only use the results of these processes. Tuning took a lot of time and will not be repeated for the sake of time of execution and the extensive feature search is clearly explained in the Jupyter Notebook and I am happy to explain it during the demo.  
+Hyperparameter tuning and extensive feature search is not done in the Python files. These files only use the results of these processes. The extensive feature search is clearly explained in the Jupyter Notebook and I am happy to explain it during the demo.  
 
 

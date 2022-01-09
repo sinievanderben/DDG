@@ -6,6 +6,7 @@ from cleanup_features import *
 from bonus import *
 from tuning import tuning
 
+from sklearn.model_selection import train_test_split
 import pandas as pd
 
 ## Get the data
@@ -20,18 +21,14 @@ data = removeShipname(data)
 data = objectToCategorical(data)
 
 ## Split the data
-
-X_train, y_train, X_val, y_val, X_test, y_test = getTrainValTest(X,y, 0.8, 0.1)
+# No validation set necessary for this part of code
+X_train, X_test, y_train, y_test = train_test_split(X,y, train_size=0.8, random_state = 1)
 
 ## Feature selection 
 # Based on information from notebook 
 
 subset_X_train = X_train[['cabins',  'length', 'passenger_density',
         'length_per_cabin', 'total_people']]
-
-    
-subset_X_val = X_val[['cabins' ,  'length', 'passenger_density',
-       'length_per_cabin', 'total_people']]
 
 subset_X_test = X_test[['cabins' ,  'length', 'passenger_density',
        'length_per_cabin', 'total_people']]

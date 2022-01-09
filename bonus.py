@@ -15,7 +15,7 @@ class Bonus:
         print("........Bonus comparison ........")
         for i in range(len(model_name)):
             if self.rmse_manual < model_rmse[i]:
-                print("Multiplying \'passenger' * \'passenger_density gives a higher RMSE ({0}) compared to the RMSE of {1}, which is {2}".format(self.rmse_manual, model_name[i], model_rmse[i]))
+                print("Multiplying \'passenger' * \'passenger_density gives a lower RMSE ({0}) compared to the RMSE of {1}, which is {2}".format(self.rmse_manual, model_name[i], model_rmse[i]))
             else:
                 print("{0} outperforms multiplication of \'passenger' * \'passenger_density with RMSE of {1}".format(model_name[i], model_rmse[i]))
 
