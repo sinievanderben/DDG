@@ -35,8 +35,8 @@ The collection of files are:
 - helperfunctions.py: some messy functions which I wanted to separate but did not take enough space for own files. Contains function to split the dataset and to show the reslts 
 - tuning.py performs the tuning of the RF an the GB models. 
 - cleanupfeatures.py: file that contains the functions to clean up the features and perform feature selection. 
-- bonus.py:
+- bonus.py: comparison of a simple equation to model performance using RMSE
 
-Hyperparameter tuning and extensive feature search is not done in the Python files. These files only use the results of these processes. The extensive feature search is clearly explained in the Jupyter Notebook and I am happy to explain it during the demo.  
+Extensive feature search is not done in the Python files. These files only use the results of this process. The extensive feature search is clearly explained in the Jupyter Notebook and I am happy to explain it during the demo.  
 
 
