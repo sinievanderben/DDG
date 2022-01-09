@@ -8,6 +8,8 @@ All files can be run in the following environment called 'ddg':
 conda env create -f environment.yml
 ```
 
+Three models are compared: Linear regression, Random Forest and Gradient Boosting. The latter two are ensembles of models. 
+
 ## Jupyter Notebook: ship.ipynb
 I think the notebook speaks for itself. It consists of the following parts:
 
