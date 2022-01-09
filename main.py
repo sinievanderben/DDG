@@ -1,5 +1,6 @@
 from helperfunctions import *
 from cleanup_features import *
+from bonus import *
 import pandas as pd
 
 ## Get the data
@@ -15,10 +16,25 @@ data = objectToCategorical(data)
 
 X_train, X_val, X_test, y_train, y_val, y_test = getTrainValTest(X,y, 0.8, 0.1)
 
-## Get a suited algorithm
+## Train Algorithms 
 
-## Tune the algorithm's hyperparameters 
+# LR
 
-## Test the algorithm 
+# RF
+
+# GB 
+
+## Test Algorithms 
+
+# Save the results for later 
+name_list = []
+rmse_list = []
+
+## Get final model 
 
 ## Compare to simple equation 
+bonus = Bonus(X_test, y_test)
+
+for i in range(3):
+    Bonus.compare2equation(name_list, rmse_list)
+    

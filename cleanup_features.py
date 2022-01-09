@@ -10,12 +10,21 @@ def separateFeatures_Output(data):
 def removeShipname(data):
     data = data.drop(columns = ['Ship_name']).copy()
 
+    print("Shipname removed")
+
+    return data
+
 # Change all object columns to categorical 
 def objectToCategorical(data):
+
+    count = 0 
+
     for column in data:
         if column.dtype == "object":
             data.column.astype('category').cat.codes
+            count = count + 1
     
+    print("Number of converted columns: ", count)
 
     return data 
 
