@@ -20,4 +20,7 @@ def getTrainValTest(X, y, train_part, val_part):
 
     X_val, X_test, y_val, y_test = train_test_split(X_rest,y_rest, test_size=test_part)
 
+    print("..........")
+    print("Splitted the data into train, validation and test set")
+
     return X_train, y_train, X_val, y_val, X_test, y_test
