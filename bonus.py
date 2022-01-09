@@ -12,8 +12,10 @@ class Bonus:
         self.rmse_manual = mean_squared_error(self.y, self.y_manual_prediction, squared = False)
 
     def compare2equation(self, model_name, model_rmse):
-        if self.rmse_manual > model_rmse:
-            print("Multiplying \'passenger' * \'passenger_density gives a higher RMSE compared to the RMSE of ", model_name)
-        else:
-            print(model_name, " outperforms multiplication of \'passenger' * \'passenger_density")
+        print("........Bonus comparison ........")
+        for i in range(len(model_name)):
+            if self.rmse_manual < model_rmse[i]:
+                print("Multiplying \'passenger' * \'passenger_density gives a higher RMSE ({0}) compared to the RMSE of {1}, which is {2}".format(self.rmse_manual, model_name[i], model_rmse[i]))
+            else:
+                print("{0} outperforms multiplication of \'passenger' * \'passenger_density with RMSE of {1}".format(model_name[i], model_rmse[i]))
 

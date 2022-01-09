@@ -20,7 +20,20 @@ def getTrainValTest(X, y, train_part, val_part):
 
     X_val, X_test, y_val, y_test = train_test_split(X_rest,y_rest, test_size=test_part)
 
-    print("..........")
+    print("........")
     print("Splitted the data into train, validation and test set")
+    print("........")
 
     return X_train, y_train, X_val, y_val, X_test, y_test
+
+def compareModelScores(name_list, r2_list, rmse_list):
+    max_r2 = max(r2_list)
+    max_r2_index = r2_list.index(max_r2)
+
+    print("........FINAL RESULTS.......")
+    print("The ", name_list[max_r2_index], " has the highest R2 score of ", max_r2)
+    
+    min_rmse = min(rmse_list)
+    min_rmse_index = rmse_list.index(min_rmse)
+
+    print("The ", name_list[min_rmse_index], " has the lowest RMSE score of ", min_rmse)
